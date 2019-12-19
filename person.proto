@@ -7,4 +7,6 @@ message Person {
   bytes small_picture = 4;
   bool profile_verified = 5;
   float height = 6;
+
+  repeated string phone_number = 7;
 }
