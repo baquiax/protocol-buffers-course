@@ -14,4 +14,13 @@ message Person {
   float height = 6;
 
   repeated string phone_number = 7;
+
+  enum EyeColor {
+    UNKNOWN_COLOR = 0; // The first element in a enum is the default value
+    GREEN = 1;
+    BROWN = 2;
+    BLUE = 3;
+  }
+
+  EyeColor eye_color = 8;
 }
