@@ -1,5 +1,10 @@
+// There is a version 2, but we use the latest
 syntax = "proto3";
 
+/**
+ * This file represents a Person structure.
+ * In the future we will transfer data with 
+ */ 
 message Person {
   int32 age = 1;
   string first_name = 2;
