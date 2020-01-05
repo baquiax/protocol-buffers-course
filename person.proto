@@ -1,0 +1,42 @@
+// There is a version 2, but we use the latest
+syntax = "proto3";
+
+import "exercises/1/date.proto";
+
+package person;
+
+/**
+ * This file represents a Person structure.
+ * In the future we will transfer data with 
+ */ 
+message Person {
+  int32 age = 1;
+  string first_name = 2;
+  string last_name = 3;
+  bytes small_picture = 4;
+  bool profile_verified = 5;
+  float height = 6;
+
+  repeated string phone_number = 7;
+
+  enum EyeColor {
+    UNKNOWN_COLOR = 0; // The first element in a enum is the default value
+    GREEN = 1;
+    BROWN = 2;
+    BLUE = 3;
+  }
+
+  EyeColor eye_color = 8;
+
+  my.dates.Date birthday = 9;
+
+  message Address {
+    string address_line_1 = 1;
+    string address_line_2 = 2;
+    string zip_code = 3;
+    string city = 4;
+    string country = 5;
+  }
+
+  repeated Address addresses = 10;
+}

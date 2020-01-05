@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message Person {
+    string first_name = 1;
+    // If person has two or more midle names
+    repeated string middle_name = 2;
+    string last_name = 3;
+}
