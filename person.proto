@@ -1,6 +1,8 @@
 // There is a version 2, but we use the latest
 syntax = "proto3";
 
+import "exercises/1/date.proto";
+
 /**
  * This file represents a Person structure.
  * In the future we will transfer data with 
@@ -34,12 +36,5 @@ message Person {
     string country = 5;
   }
 
-
   repeated Address addresses = 10;
-}
-
-message Date {
-  uint32 year = 1;
-  uint32 month = 2;
-  uint32 day = 3;
 }
