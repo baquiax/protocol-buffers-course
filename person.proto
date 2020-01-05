@@ -3,6 +3,8 @@ syntax = "proto3";
 
 import "exercises/1/date.proto";
 
+package person;
+
 /**
  * This file represents a Person structure.
  * In the future we will transfer data with 
@@ -26,7 +28,7 @@ message Person {
 
   EyeColor eye_color = 8;
 
-  Date birthday = 9;
+  my.dates.Date birthday = 9;
 
   message Address {
     string address_line_1 = 1;
