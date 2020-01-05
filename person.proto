@@ -25,6 +25,17 @@ message Person {
   EyeColor eye_color = 8;
 
   Date birthday = 9;
+
+  message Address {
+    string address_line_1 = 1;
+    string address_line_2 = 2;
+    string zip_code = 3;
+    string city = 4;
+    string country = 5;
+  }
+
+
+  repeated Address addresses = 10;
 }
 
 message Date {
